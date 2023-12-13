@@ -52,6 +52,7 @@ in
       ++ [ (import ./cloudflare-warp.nix) ]
       ++ [ (import ./virtualization.nix) ]
       ++ [ (import ./../../hosts/amacbook/hardware-configuration.nix) ]
+      ++ [ (import ./../../hosts/amacbook/default.nix) ]
     ;
     };
 }
