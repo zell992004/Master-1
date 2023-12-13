@@ -19,7 +19,7 @@
       ripgrep
       rustup
       php
-      vscode
+     # vscode
 
       # others
       openssl
