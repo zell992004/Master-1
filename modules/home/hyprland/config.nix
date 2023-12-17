@@ -7,8 +7,12 @@ in
   wayland.windowManager.hyprland = {
     extraConfig = "
       $mainMod = SUPER
-      monitor = ,highrr,auto,1
-      monitor = ,highres,auto,1
+     # monitor = ,highrr,auto,1
+     # monitor = ,highres,auto,1
+     monitor=eDP-1,preferred,3600x0,auto
+     monitor=DP-4,preferred,1680x0,auto
+     monitor=DP-5,preferred,0x0,auto
+
       #TODO setup monitor positioning
       
       #TODO Add swipe gesture for workspaces
