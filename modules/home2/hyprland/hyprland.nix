@@ -21,11 +21,11 @@
   systemd.user.targets.hyprland-session.Unit.Wants = [ "xdg-desktop-autostart.target" ];
   wayland.windowManager.hyprland = {
     enable = true;
+      systemd.enable = true;
     xwayland = {
       enable = true;
     #  hidpi = true;
     };
     #nvidiaPatches = false;
-    systemdIntegration = true;
   };
 }
