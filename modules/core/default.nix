@@ -15,8 +15,7 @@ in
   G14 = nixpkgs.lib.nixosSystem {
     specialArgs = { inherit self inputs; };
     modules =
-      [ (import ./bootloader.nix) ]
-      ++ [ (import ./hardware.nix) ]
+       [ (import ./hardware.nix) ]
       ++ [ (import ./xserver.nix) ]
       ++ [ (import ./steam.nix) ] 
       ++ [ (import ./pipewire.nix) ]
@@ -36,8 +35,7 @@ in
     amacbook = nixpkgs.lib.nixosSystem {
     specialArgs = { inherit self inputs; };
     modules =
-      [ (import ./bootloader.nix) ]
-      ++ [ (import ./hardware.nix) ]
+       [ (import ./hardware.nix) ]
       ++ [ (import ./xserver.nix) ]
       ++ [ (import ./steam.nix) ] 
       ++ [ (import ./pipewire.nix) ]
@@ -58,7 +56,6 @@ in
     P72 = nixpkgs.lib.nixosSystem {
     specialArgs = { inherit self inputs; };
     modules =
-     # [ (import ./bootloader.nix) ]
        [ (import ./hardware.nix) ]
       ++ [ (import ./xserver.nix) ]
       ++ [ (import ./steam.nix) ] 
