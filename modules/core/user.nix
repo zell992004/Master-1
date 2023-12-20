@@ -38,7 +38,7 @@ in
     };
       users.${username3} = {
       imports = [ (import ./../hacker) ];
-      home.username = username;
+      home.username = username3;
       home.homeDirectory = "/home/${username3}";
       home.stateVersion = "23.11";
       programs.home-manager.enable = true;

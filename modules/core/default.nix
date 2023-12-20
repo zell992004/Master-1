@@ -74,4 +74,6 @@ in
       ++ [ (import ./virtualization.nix) ]
       ++ [ (import ./../../hosts/P72/hardware-configuration.nix) ]
       ++ [ (import ./../../hosts/P72/default.nix) ]
+      ;
+    };
 }
