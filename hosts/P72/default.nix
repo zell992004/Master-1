@@ -12,6 +12,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_lqx;
   boot.initrd.kernelModules = [ "nvidea" ];
-  services.xserver.videoDrivers.enable = ["nvidia"] 
+  services.xserver.videoDrivers.enable = [ "nvidia" ]; 
 
 }

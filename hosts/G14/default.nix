@@ -7,5 +7,5 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_lqx;
   boot.initrd.kernelModules = [ "nvidia" ]; 
-  services.xserver.videoDrivers.enable = ["amdgpu"]
+  services.xserver.videoDrivers.enable = [ "amdgpu" ];
 }
