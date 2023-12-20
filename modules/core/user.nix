@@ -5,6 +5,7 @@
 let
   name = "Peter Bouchard";
   username = "zell";
+  username3 = "hacker";
   email = "zell992004@gmail.com";
   #packages = with pkgs; [
   #  fish
@@ -35,6 +36,13 @@ in
       home.stateVersion = "23.11";
       programs.home-manager.enable = true;
     };
+      users.${username3} = {
+      imports = [ (import ./../hacker) ];
+      home.username = username;
+      home.homeDirectory = "/home/${username3}";
+      home.stateVersion = "23.11";
+      programs.home-manager.enable = true;
+    };
   };
 
   users.users = {
@@ -51,9 +59,15 @@ in
     shell = pkgs.zsh;
     hashedPassword = "$y$j9T$urOPleMCmjnCngOHJCnqL.$E4.SrQdy7JQmLrtxRTrG.I3BsmkYH1dC7aps5T/3fzD";
     };
+     ${username3} = {
+    isNormalUser = true;
+    description = name;
+    extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
+    };
   };
 
   users.users.root.initialPassword = "MONkeyfook2893!!";
   # services.getty.autologinUser = "zell";
-  nix.settings.allowed-users = [ "zell" "airyanna" ];
+  nix.settings.allowed-users = [ "zell" "airyanna" "hacker" ];
 }
