@@ -58,8 +58,8 @@ in
     P72 = nixpkgs.lib.nixosSystem {
     specialArgs = { inherit self inputs; };
     modules =
-      [ (import ./bootloader.nix) ]
-      ++ [ (import ./hardware.nix) ]
+     # [ (import ./bootloader.nix) ]
+       [ (import ./hardware.nix) ]
       ++ [ (import ./xserver.nix) ]
       ++ [ (import ./steam.nix) ] 
       ++ [ (import ./pipewire.nix) ]
