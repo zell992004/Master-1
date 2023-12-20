@@ -2,7 +2,7 @@
   services.xserver = {
     enable = true;
     layout = "us";
-    videoDrivers = [ "amdgpu" ];
+   # videoDrivers = [ "nvidia" ];
     displayManager = {
       gdm.enable = true;
     };

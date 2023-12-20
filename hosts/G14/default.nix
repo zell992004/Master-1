@@ -6,5 +6,6 @@
     boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_lqx;
-  boot.initrd.kernelModules = [ "amdgpu" ]; #TODO:check if valid
+  boot.initrd.kernelModules = [ "nvidia" ]; 
+  services.xserver.videoDrivers.enable = ["amdgpu"]
 }
